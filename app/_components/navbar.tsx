@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between border-b border-solid px-8 py-4">
-      <div className="flex items-center gap-10">
-        <DollarSignIcon /> Control
+      <div className="flex items-center gap-6 md:gap-10">
+        <DollarSignIcon />
         <Link
           href="/"
           className={
@@ -32,19 +32,9 @@ const Navbar = () => {
         >
           Transações
         </Link>
-        <Link
-          href="/subscription"
-          className={
-            pathname === "/subscription"
-              ? "font-bold text-primary"
-              : "text-muted-foreground"
-          }
-        >
-          Assinatura
-        </Link>
       </div>
       <div>
-        <UserButton showName />
+        <UserButton />
       </div>
     </nav>
   );

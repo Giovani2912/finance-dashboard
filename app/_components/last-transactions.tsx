@@ -1,6 +1,10 @@
 import { Button } from "@/app/_components/ui/button";
-import { CardContent, CardHeader, CardTitle } from "@/app/_components/ui/card";
-import { ScrollArea } from "@/app/_components/ui/scroll-area";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/app/_components/ui/card";
 import { TRANSACTION_PAYMENT_METHOD_ICONS } from "@/app/_constants/transactions";
 import { formatCurrency } from "@/app/_lib/formatCurrency";
 import { Transaction, TransactionType } from "@prisma/client";
@@ -28,7 +32,7 @@ const LastTransactions = ({ lastTransactions }: LastTransactionsProps) => {
     return "-";
   };
   return (
-    <ScrollArea className="rounded-md border">
+    <Card className="mt-6 md:mt-0">
       <CardHeader className="flex-row items-center justify-between">
         <CardTitle className="font-bold">Últimas Transações</CardTitle>
         <Button variant="outline" className="rounded-full font-bold" asChild>
@@ -68,7 +72,7 @@ const LastTransactions = ({ lastTransactions }: LastTransactionsProps) => {
           </div>
         ))}
       </CardContent>
-    </ScrollArea>
+    </Card>
   );
 };
 

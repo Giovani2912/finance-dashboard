@@ -14,7 +14,7 @@ const AddTransactionButton = () => {
         className="rounded-full font-bold"
         onClick={() => setDialogIsOpen(true)}
       >
-        Adicionar transação
+        <span className="hidden md:block">Adicionar transação</span>
         <ArrowDownUpIcon />
       </Button>
       <UpsertTransactionDialog
